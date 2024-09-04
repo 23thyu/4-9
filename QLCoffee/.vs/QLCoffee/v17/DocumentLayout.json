@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hieun\\source\\repos\\\u0110\u1ED3 \u00E1n\\QLCoffee\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B59DF0DE-C5FC-484E-945A-FCD0105D58A7}|QLCoffee\\QLCoffee.csproj|c:\\users\\hieun\\source\\repos\\\u0111\u1ED3 \u00E1n\\qlcoffee\\qlcoffee\\views\\shared\\_layouttrangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B59DF0DE-C5FC-484E-945A-FCD0105D58A7}|QLCoffee\\QLCoffee.csproj|solutionrelative:qlcoffee\\views\\shared\\_layouttrangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 562,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_LayoutTrangChu.cshtml",
+              "DocumentMoniker": "C:\\Users\\hieun\\source\\repos\\\u0110\u1ED3 \u00E1n\\QLCoffee\\QLCoffee\\Views\\Shared\\_LayoutTrangChu.cshtml",
+              "RelativeDocumentMoniker": "QLCoffee\\Views\\Shared\\_LayoutTrangChu.cshtml",
+              "ToolTip": "C:\\Users\\hieun\\source\\repos\\\u0110\u1ED3 \u00E1n\\QLCoffee\\QLCoffee\\Views\\Shared\\_LayoutTrangChu.cshtml",
+              "RelativeToolTip": "QLCoffee\\Views\\Shared\\_LayoutTrangChu.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAKMAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-04T04:09:16.85Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
