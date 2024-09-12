@@ -30,6 +30,9 @@
         <th>
             @Html.DisplayNameFor(model => model.NgaySX)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image1)
+        </th>
         <th></th>
     </tr>
 
@@ -54,9 +57,19 @@
             @Html.DisplayFor(modelItem => item.NgaySX)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.MaSP  }) |
-            @Html.ActionLink("Details", "Details", new {  id=item.MaSP }) |
-            @Html.ActionLink("Delete", "Delete", new {  id=item.MaSP })
+            @if (!string.IsNullOrEmpty(item.Image1))
+            {
+                <img src="@Url.Content(item.Image1)" alt="Image" style="width: 100px; height: 100px;" />
+            }
+            else
+            {
+                <span>No Image</span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MaSP })
         </td>
     </tr>
 }

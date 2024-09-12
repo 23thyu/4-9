@@ -101,6 +101,7 @@
     <Property Name="SoLuongSP" Type="int" />
     <Property Name="MaLoaiSP" Type="char" MaxLength="4" />
     <Property Name="NgaySX" Type="date" />
+    <Property Name="Image1" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="SHIPPER">
     <Key>

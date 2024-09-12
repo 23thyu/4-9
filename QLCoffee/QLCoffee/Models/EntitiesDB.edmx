@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLyQuanCoffeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuanLyQuanCoffeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CHITIET_HOADON">
           <Key>
             <PropertyRef Name="MaHD" />
@@ -106,6 +106,7 @@
           <Property Name="SoLuongSP" Type="int" />
           <Property Name="MaLoaiSP" Type="char" MaxLength="4" />
           <Property Name="NgaySX" Type="date" />
+          <Property Name="Image1" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="SHIPPER">
           <Key>
@@ -330,8 +331,7 @@
             <End Role="HOADON" EntitySet="HOADON" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyQuanCoffeeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -457,6 +457,7 @@
           <Property Name="NgaySX" Type="DateTime" Precision="0" />
           <NavigationProperty Name="CHITIET_HOADON" Relationship="Self.FK_SANPHAM_CHITIETHOADON" FromRole="SANPHAM" ToRole="CHITIET_HOADON" />
           <NavigationProperty Name="LOAISANPHAM" Relationship="Self.FK_LOAISANPHAM_SANPHAM" FromRole="SANPHAM" ToRole="LOAISANPHAM" />
+          <Property Name="Image1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="SHIPPER">
           <Key>
@@ -792,6 +793,7 @@
           <EntitySetMapping Name="SANPHAMs">
             <EntityTypeMapping TypeName="QuanLyQuanCoffeeModel.SANPHAM">
               <MappingFragment StoreEntitySet="SANPHAM">
+                <ScalarProperty Name="Image1" ColumnName="Image1" />
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
                 <ScalarProperty Name="TenSP" ColumnName="TenSP" />
                 <ScalarProperty Name="GiaSP" ColumnName="GiaSP" />

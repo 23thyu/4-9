@@ -9,8 +9,14 @@ namespace QLCoffee.Controllers
 {
     public class HomeController : Controller
     {
+        QuanLyQuanCoffeeEntities db = new QuanLyQuanCoffeeEntities();
         
-    
+        public ActionResult DanhSachSanPham()
+        {
+            var listSP = db.SANPHAMs.ToList();
+
+            return View(listSP);
+        }
         public ActionResult TrangChu()
         {
             return View();

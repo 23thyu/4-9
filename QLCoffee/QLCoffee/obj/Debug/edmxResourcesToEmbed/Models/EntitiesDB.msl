@@ -103,6 +103,7 @@
     <EntitySetMapping Name="SANPHAMs">
       <EntityTypeMapping TypeName="QuanLyQuanCoffeeModel.SANPHAM">
         <MappingFragment StoreEntitySet="SANPHAM">
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
           <ScalarProperty Name="MaSP" ColumnName="MaSP" />
           <ScalarProperty Name="TenSP" ColumnName="TenSP" />
           <ScalarProperty Name="GiaSP" ColumnName="GiaSP" />

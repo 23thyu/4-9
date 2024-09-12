@@ -18,32 +18,22 @@ namespace QLCoffee.Models
     public partial class TAIKHOAN
     {
         [DisplayName("TenDN")]
-        [Required(ErrorMessage = "Not Empty")]
+        [Required(ErrorMessage = "Error Empty")]
 
         public string TenDN { get; set; }
-
         [DisplayName("MatKhau")]
-        [Required(ErrorMessage = "Not Empty")]
+        [Required(ErrorMessage = "Error Empty")]
         public string MatKhau { get; set; }
-
-        [NotMapped]// k anh xa
-        [DisplayName("Respass")]
-        [Required(ErrorMessage = "Not Match")]
-        [Compare("MatKhau")]
-        public string Respass { get; set; }
-
-
-
-        //[Required(ErrorMessage = "Not Empty")]
+        [DisplayName("PhanQuyen")]
+        [Required(ErrorMessage = "Error Empty")]
         public string PhanQuyen { get; set; }
-
-        //[DisplayName("MaKH")]
-        //[Required(ErrorMessage = "Not Empty")]
         public string MaKH { get; set; }
-
-        //[DisplayName("MaNV")]
-        //[Required(ErrorMessage = "Not Empty")]
         public string MaNV { get; set; }
+
+        [NotMapped]
+        [Required(ErrorMessage = "Error Empty")]
+        [Compare("MatKhau")]
+        public string Repass { get; set; }
     
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual NHANVIEN NHANVIEN { get; set; }

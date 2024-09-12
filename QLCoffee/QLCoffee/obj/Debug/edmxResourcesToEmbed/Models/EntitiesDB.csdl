@@ -122,6 +122,7 @@
     <Property Name="NgaySX" Type="DateTime" Precision="0" />
     <NavigationProperty Name="CHITIET_HOADON" Relationship="Self.FK_SANPHAM_CHITIETHOADON" FromRole="SANPHAM" ToRole="CHITIET_HOADON" />
     <NavigationProperty Name="LOAISANPHAM" Relationship="Self.FK_LOAISANPHAM_SANPHAM" FromRole="SANPHAM" ToRole="LOAISANPHAM" />
+    <Property Name="Image1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="SHIPPER">
     <Key>
