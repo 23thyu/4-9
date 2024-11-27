@@ -56,12 +56,25 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.0-rc.1.24431.7\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -118,14 +131,11 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="X.PagedList, Version=7.9.0.0, Culture=neutral, PublicKeyToken=00b6c4f97602e5e8, processorArchitecture=MSIL">
-      <HintPath>..\packages\X.PagedList.7.9.0\lib\net461\X.PagedList.dll</HintPath>
+    <Reference Include="X.PagedList, Version=10.0.3.0, Culture=neutral, PublicKeyToken=525ccaa9023f010c, processorArchitecture=MSIL">
+      <HintPath>..\packages\X.PagedList.10.0.3\lib\netstandard2.0\X.PagedList.dll</HintPath>
     </Reference>
-    <Reference Include="X.PagedList.Mvc, Version=7.9.1.0, Culture=neutral, PublicKeyToken=c6e0b5b21f916f4f, processorArchitecture=MSIL">
-      <HintPath>..\packages\X.PagedList.Mvc.7.9.1\lib\net461\X.PagedList.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="X.PagedList.Web.Common, Version=7.9.1.0, Culture=neutral, PublicKeyToken=00b6c4f97602e5e8, processorArchitecture=MSIL">
-      <HintPath>..\packages\X.PagedList.Web.Common.7.9.1\lib\net461\X.PagedList.Web.Common.dll</HintPath>
+    <Reference Include="X.PagedList.Web.Common, Version=8.0.7.0, Culture=neutral, PublicKeyToken=525ccaa9023f010c, processorArchitecture=MSIL">
+      <HintPath>..\packages\X.PagedList.Web.Common.8.0.7\lib\netstandard2.0\X.PagedList.Web.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +190,7 @@
     <Compile Include="Models\LOAISANPHAM.cs">
       <DependentUpon>EntitiesDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\mapSanPham.cs" />
     <Compile Include="Models\NHACUNGCAP.cs">
       <DependentUpon>EntitiesDB.tt</DependentUpon>
     </Compile>
@@ -214,32 +225,31 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Content\Image\banner001.png" />
-    <Content Include="Content\Image\banner002.jpg" />
-    <Content Include="Content\Image\banner003.png" />
-    <Content Include="Content\Image\banner4.jpg" />
-    <Content Include="Content\Image\caphe.jpg" />
+    <Content Include="Content\Image\account_icon.png" />
+    <Content Include="Content\Image\applestore.jpg" />
+    <Content Include="Content\Image\baner_dongho.jpg" />
+    <Content Include="Content\Image\baner_ip.jpg" />
+    <Content Include="Content\Image\baner_taynghe.jpg" />
     <Content Include="Content\Image\com-tron-han-quoc.jpg" />
     <Content Include="Content\Image\CoverFB.png" />
-    <Content Include="Content\Image\do_banner.jpg" />
-    <Content Include="Content\Image\ga-chien-han-quoc.jpg" />
-    <Content Include="Content\Image\hinhnv.jpeg" />
-    <Content Include="Content\Image\iconfb.png" />
-    <Content Include="Content\Image\images.png" />
-    <Content Include="Content\Image\katinat1.jpg" />
-    <Content Include="Content\Image\katinat2.jpg" />
-    <Content Include="Content\Image\katinat3.jpg" />
-    <Content Include="Content\Image\khuyen-mai.jpg" />
-    <Content Include="Content\Image\kim-chi-ham-gio-heo.jpg" />
-    <Content Include="Content\Image\kimbap_resize.jpg" />
+    <Content Include="Content\Image\cuahang.jpg" />
+    <Content Include="Content\Image\cuahanggioithieu.jpg" />
+    <Content Include="Content\Image\cuahangtopzone.jpg" />
+    <Content Include="Content\Image\cuahangtopzone2.jpg" />
+    <Content Include="Content\Image\cuahangtopzone3.jpg" />
+    <Content Include="Content\Image\ipad.png" />
+    <Content Include="Content\Image\iphone.png" />
+    <Content Include="Content\Image\logodaxoaphong.png" />
+    <Content Include="Content\Image\logofb.png" />
+    <Content Include="Content\Image\LOGOHGPHONE.png" />
     <Content Include="Content\Image\logoigtrangreal.png" />
-    <Content Include="Content\Image\micay.jpg" />
-    <Content Include="Content\Image\thit-nuong-bbq.jpg" />
-    <Content Include="Content\Image\tobboki.jpg" />
-    <Content Include="Content\Image\trasua.png" />
-    <Content Include="Content\Image\tratc.png" />
-    <Content Include="Content\Image\Tteokbokki.jpg" />
+    <Content Include="Content\Image\logoxoaphong.png" />
+    <Content Include="Content\Image\mac.png" />
+    <Content Include="Content\Image\phukien.png" />
+    <Content Include="Content\Image\Tainghe.png" />
+    <Content Include="Content\Image\tainghe_sizenho.png" />
     <Content Include="Content\Image\Ungdungreal.png" />
+    <Content Include="Content\Image\watch.png" />
     <Content Include="Content\mycss\mystyle.css" />
     <Content Include="Content\mycss\styleadmin.css" />
     <Content Include="favicon.ico" />
@@ -331,9 +341,11 @@
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Shared\_LayoutDangKy.cshtml" />
     <Content Include="Views\Home\DanhSachSanPham.cshtml" />
+    <Content Include="Views\SanPham\Upload_Image.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data\Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

@@ -54,12 +54,12 @@
             @Html.DisplayFor(modelItem => item.MaLoaiSP)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.NgaySX)
+                
         </td>
         <td>
             @if (!string.IsNullOrEmpty(item.Image1))
             {
-                <img src="@Url.Content(item.Image1)" alt="Image" style="width: 100px; height: 100px;" />
+                <img src="@Url.Content(item.Image1)" alt ="Image" style="width: 100px; height: 100px;" />
             }
             else
             {

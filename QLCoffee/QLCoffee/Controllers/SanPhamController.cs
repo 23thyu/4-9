@@ -19,26 +19,17 @@ namespace QLCoffee.Controllers
         }
         public ActionResult Create()
         {
-            return View();
+            var sanpham = new SANPHAM
+
+            {
+                NgaySX = DateTime.Now
+            };
+            return View(sanpham);
         }
         [HttpPost]
 
-        public ActionResult Create(SANPHAM sanpham,HttpPostedFileBase Image)
+        public ActionResult Create(SANPHAM sanpham, HttpPostedFileBase Image)
         {
-            if (ModelState.IsValid)
-            { 
-                if(Image != null && Image.ContentLength > 0)//Kiểm tra người dùng có upload file hay không
-                {
-                    var fileName = Path.GetFileName(Image.FileName);//lấy tên file gốc của ảnh 
-
-                    var path = Path.Combine(Server.MapPath("~/Uploads"), fileName);//Đặt đường dẫn file đã được lưu
-
-                    Image.SaveAs(path);//Lưu file vào Uploads
-
-                    sanpham.Image1 = "/Uploads/" + fileName;
-
-                }    
-            }
             database.SANPHAMs.Add(sanpham);
             database.SaveChanges();
             return RedirectToAction("Index");
@@ -49,6 +40,7 @@ namespace QLCoffee.Controllers
         }
         public ActionResult Edit(string id)
         {
+
             return View(database.SANPHAMs.Where(s => s.MaSP == id).FirstOrDefault());
         }
         [HttpPost]
@@ -69,6 +61,44 @@ namespace QLCoffee.Controllers
             database.SANPHAMs.Remove(sanpham);
             database.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult Upload_Image(string idSanPham)
+        {
+            ViewBag.idSanPham = idSanPham;
+            return View();
+        }
+       [HttpPost]
+        public ActionResult Upload_Image( string idSanPham ,HttpPostedFileBase fileImage)
+        {
+            //1. Kiểm Tra hình
+            if(fileImage == null)//If file trong sẽ hiện lỗi
+            {
+                ViewBag.error = "File empty";
+                ViewBag.idSanPham = idSanPham;
+                return View();
+
+            }
+            if(fileImage.ContentLength == 0)//file nó không có nội dung hoặc k có giá trị thì nó cũng báo lỗi
+
+            {
+                ViewBag.error = "File không có giá trị";
+                ViewBag.idSanPham = idSanPham;
+                return View();
+            }
+
+            //3. Xác định đường dẫn lưu file ; url tương đối => tuyệt đối
+            var urlTuongDoi = "/Data/Image/";
+            var urlTuyetDoi = Server.MapPath(urlTuongDoi);
+
+            //4.Lưu File ( Chưa ktra trùng file)
+            fileImage.SaveAs(urlTuyetDoi + fileImage.FileName);
+            //5.Lưu vào data
+            mapSanPham map = new mapSanPham();
+            
+            map.Upload_Image(idSanPham,urlTuongDoi+fileImage.FileName);
+            ViewBag.idSanPham = idSanPham;
+            return RedirectToAction("Index");
+            
         }
     }
 }
